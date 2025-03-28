@@ -12,13 +12,11 @@ class handler(BaseHTTPRequestHandler):
 
         data = [
             {"platform": "Instagram", "time": 20, "data": 200},
-            {"platform": "Facebook", "time": 30, "data": 300},
-            {"platform": "Twitter", "time": 40, "data": 400},
-            {"platform": "LinkedIn", "time": 50, "data": 500},
+            {"platform": "Facebook", "time": 30, "data": 10},
+            {"platform": "Twitter", "time": 40, "data": 378},
+            {"platform": "LinkedIn", "time": 50, "data": 300},
             {"platform": "TikTok", "time": 60, "data": 600}
         ]
 
-        
-        
         self.wfile.write(json.dumps(data).encode('utf-8'))
         return
