@@ -35,5 +35,5 @@ class handler(BaseHTTPRequestHandler):
         }
         """
         
-        self.wfile.write('Hello, world!'.encode('utf-8'))
+        self.wfile.write(string.encode('utf-8'))
         return
