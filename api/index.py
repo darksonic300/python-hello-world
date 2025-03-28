@@ -7,8 +7,7 @@ class handler(BaseHTTPRequestHandler):
         self.send_header('Content-type','application/json')
         self.end_headers()
 
-        string = """
-        {
+        string = """{
           "platform": "Instagram",
           "time": 20,
           "data": 200
@@ -32,8 +31,7 @@ class handler(BaseHTTPRequestHandler):
           "platform": "TikTok",
           "time": 60,
           "data": 600
-        }
-        """
+        }"""
         
         self.wfile.write(string.encode('utf-8'))
         return
