@@ -15,7 +15,7 @@ class handler(BaseHTTPRequestHandler):
             {"platform": "Facebook", "time": 30, "data": 10},
             {"platform": "Twitter", "time": 40, "data": 378},
             {"platform": "LinkedIn", "time": 50, "data": 300},
-            {"platform": "TikTok", "time": 60, "data": 600}
+            {"platform": "TikTok", "time": 60, "data": 600},
             {"total": 1488}
         ]
     
