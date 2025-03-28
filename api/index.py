@@ -16,6 +16,7 @@ class handler(BaseHTTPRequestHandler):
             {"platform": "Twitter", "time": 40, "data": 378},
             {"platform": "LinkedIn", "time": 50, "data": 300},
             {"platform": "TikTok", "time": 60, "data": 600}
+            {"total": 1488}
         ]
 
         json_data = json.dumps(data)
