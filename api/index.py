@@ -18,5 +18,14 @@ class handler(BaseHTTPRequestHandler):
             {"platform": "TikTok", "time": 60, "data": 600}
         ]
 
+        json_data = json.loads(data)
+
+        totale = 0
+
+        for spreco_dati in json_data:
+            totale += spreco_dati["data"]
+
+        data.extend([{"total": totale}])
+        
         self.wfile.write(json.dumps(data).encode('utf-8'))
         return
