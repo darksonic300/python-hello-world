@@ -20,5 +20,5 @@ class handler(BaseHTTPRequestHandler):
 
         
         
-        self.wfile.write(json.dumps(data))
+        self.wfile.write(json.dumps(data).encode('utf-8'))
         return
