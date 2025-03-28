@@ -18,7 +18,7 @@ class handler(BaseHTTPRequestHandler):
             {"platform": "TikTok", "time": 60, "data": 600}
         ]
 
-        json_data = json.loads(data)
+        json_data = json.dumps(data)
 
         totale = 0
 
