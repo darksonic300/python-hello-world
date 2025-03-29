@@ -1,5 +1,6 @@
 from http.server import BaseHTTPRequestHandler
 import json
+import random
 
 class handler(BaseHTTPRequestHandler):
 
@@ -10,14 +11,25 @@ class handler(BaseHTTPRequestHandler):
 
         string = '{"platform": "Instagram", "time": 20, "data": 200}, {"platform": "Facebook", "time": 30, "data": 300}, {"platform": "Twitter", "time": 40, "data": 400 }, {"platform": "LinkedIn", "time": 50, "data": 500}, {"platform": "TikTok", "time": 60, "data": 600}'
 
+        sum = 0
+        
         data = [
-            {"platform": "Instagram", "time": 20, "data": 200},
-            {"platform": "Facebook", "time": 30, "data": 10},
-            {"platform": "Twitter", "time": 40, "data": 378},
-            {"platform": "LinkedIn", "time": 50, "data": 300},
-            {"platform": "TikTok", "time": 60, "data": 600},
-            {"total": 1488}
+            {"platform": "Instagram", "time": random.randint(5, 120), "data": random.randint(50, 400)},
+            {"platform": "Facebook", "time": random.randint(5, 120), "data": random.randint(50, 400)},
+            {"platform": "Twitter", "time": random.randint(5, 120), "data": random.randint(50, 400)},
+            {"platform": "LinkedIn", "time": random.randint(5, 120), "data": random.randint(50, 400)},
+            {"platform": "TikTok", "time": random.randint(5, 120), "data": random.randint(50, 400)}
+            #{"total": 1488}
         ]
+
+        json_string = json.dumps(data)
+
+        for(entry in json_string):
+            sum += entry['data']
+
+        data.append([
+            {"total": sum}
+        ])
     
         self.wfile.write(json.dumps(data).encode('utf-8'))
         return
