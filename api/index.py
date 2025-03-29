@@ -18,18 +18,16 @@ class handler(BaseHTTPRequestHandler):
             {"platform": "Facebook", "time": random.randint(5, 120), "data": random.randint(50, 400)},
             {"platform": "Twitter", "time": random.randint(5, 120), "data": random.randint(50, 400)},
             {"platform": "LinkedIn", "time": random.randint(5, 120), "data": random.randint(50, 400)},
-            {"platform": "TikTok", "time": random.randint(5, 120), "data": random.randint(50, 400)}
-            #{"total": 1488}
+            {"platform": "TikTok", "time": random.randint(5, 120), "data": random.randint(50, 400)},
+            {"total": 1488}
         ]
 
-        json_string = json.dumps(data)
+        #json_string = json.dumps(data)
 
-        for(entry in json_string):
-            sum += entry['data']
+        #for(entry in json_string):
+        #    sum += entry['data']
 
-        data.append(
-            {"total": sum}
-        )
+        #data.append({"total": sum})
     
         self.wfile.write(json.dumps(data).encode('utf-8'))
         return
