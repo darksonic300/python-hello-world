@@ -27,9 +27,9 @@ class handler(BaseHTTPRequestHandler):
         for(entry in json_string):
             sum += entry['data']
 
-        data.append([
+        data.append(
             {"total": sum}
-        ])
+        )
     
         self.wfile.write(json.dumps(data).encode('utf-8'))
         return
