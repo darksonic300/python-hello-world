@@ -18,12 +18,12 @@ class handler(BaseHTTPRequestHandler):
         self.end_headers()
         
         data = [
-            {"platform": "Instagram", "time": random.randint(5, 120), "data": random.randint(100, 10000)},
-            {"platform": "Facebook", "time": random.randint(5, 120), "data": random.randint(100, 10000)},
-            {"platform": "Twitter", "time": random.randint(5, 120), "data": random.randint(100, 10000)},
-            {"platform": "LinkedIn", "time": random.randint(5, 120), "data": random.randint(100, 10000)},
-            {"platform": "TikTok", "time": random.randint(5, 120), "data": random.randint(100, 10000)},
-            {"total": random.randint(1000, 50000)}
+            {"platform": "Instagram", "time": random.randint(5, 100), "data": random.randint(100, 10000)},
+            {"platform": "Facebook", "time": random.randint(5, 100), "data": random.randint(100, 10000)},
+            {"platform": "Twitter", "time": random.randint(5, 100), "data": random.randint(100, 10000)},
+            {"platform": "LinkedIn", "time": random.randint(5, 100), "data": random.randint(100, 10000)},
+            {"platform": "TikTok", "time": random.randint(5, 100), "data": random.randint(100, 10000)},
+            {"total": 1000}
         ]
     
         self.wfile.write(json.dumps(data).encode('utf-8'))
