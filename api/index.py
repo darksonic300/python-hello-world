@@ -18,11 +18,11 @@ class handler(BaseHTTPRequestHandler):
         self.end_headers()
         
         data = [
-            {"platform": "Instagram", "time": random.randint(5, 120), "data": random.randint(100, 1000)},
-            {"platform": "Facebook", "time": random.randint(5, 120), "data": random.randint(100, 1000)},
-            {"platform": "Twitter", "time": random.randint(5, 120), "data": random.randint(100, 1000)},
-            {"platform": "LinkedIn", "time": random.randint(5, 120), "data": random.randint(100, 1000)},
-            {"platform": "TikTok", "time": random.randint(5, 120), "data": random.randint(100, 1000)},
+            {"platform": "Instagram", "time": random.randint(5, 120), "data": random.randint(100, 10000)},
+            {"platform": "Facebook", "time": random.randint(5, 120), "data": random.randint(100, 10000)},
+            {"platform": "Twitter", "time": random.randint(5, 120), "data": random.randint(100, 10000)},
+            {"platform": "LinkedIn", "time": random.randint(5, 120), "data": random.randint(100, 10000)},
+            {"platform": "TikTok", "time": random.randint(5, 120), "data": random.randint(100, 10000)},
             {"total": 2583}
         ]
     
