@@ -8,8 +8,8 @@ class handler(BaseHTTPRequestHandler):
         self.send_response(200)
         self.send_header('Content-type','application/json')
         self.send_header('Access-Control-Allow-Origin', '*')
-        self.send_header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS')
-        self.send_header('Access-Control-Allow-Headers', 'Origin, Content-Type, Accept, Authorization')
+        self.send_header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,PATCH,OPTIONS')
+        self.send_header('Access-Control-Allow-Headers', 'Content-Type, Accept, Access-Control-Allow-Origin, Access-Control-Allow-Methods')
         self.end_headers()
 
         string = '{"platform": "Instagram", "time": 20, "data": 200}, {"platform": "Facebook", "time": 30, "data": 300}, {"platform": "Twitter", "time": 40, "data": 400 }, {"platform": "LinkedIn", "time": 50, "data": 500}, {"platform": "TikTok", "time": 60, "data": 600}'
