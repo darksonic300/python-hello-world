@@ -23,7 +23,7 @@ class handler(BaseHTTPRequestHandler):
             {"platform": "Twitter", "time": random.randint(5, 100), "data": random.randint(100, 10000)},
             {"platform": "LinkedIn", "time": random.randint(5, 100), "data": random.randint(100, 10000)},
             {"platform": "TikTok", "time": random.randint(5, 100), "data": random.randint(100, 10000)},
-            {"total": 1000}
+            {"total": 10000}
         ]
     
         self.wfile.write(json.dumps(data).encode('utf-8'))
